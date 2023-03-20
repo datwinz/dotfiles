@@ -46,7 +46,7 @@
 
 ### /etc/modules-load.d/
 
-bcm5974.conf met inhoud:
+bcm5974.conf with contents:
 
 ```
 # load bcm5974 (mouse)
@@ -55,7 +55,7 @@ bcm5974
 
 ### /etc/modprobe.d/usbmouse.conf
 
-usbmouse.conf met inhoud:
+usbmouse.conf with contents:
 
 ```
 blacklist usbmouse
@@ -63,7 +63,7 @@ blacklist usbmouse
 
 ### /etc/dracut.conf.d/usbmouse.conf
 
-usbmouse.conf met inhoud:
+usbmouse.conf with contents:
 
 ```
 omit_drivers+=" usbmouse "
@@ -100,6 +100,8 @@ To use AppArmor on a system, one must:
 
 1. Install the ```apparmor``` package.
 2. Set ```apparmor=1 security=apparmor``` on the kernel commandline.
+
+Change the value in ```/etc/default/apparmor``` from ```complain``` to ```enforce```. Reboot the laptop to finish the installation.
 
 ### vim-plug
 
@@ -150,4 +152,4 @@ fi
 
 ## Bugs 
 
-After hibernating or suspending the laptop doesn't automatically connect to the wifi device again. So you have to restart NetworkManager with ```sudo sv restart NetworkManager``` and you may have to manually readd the device with ```nmcli device set wlp3s0 managed yes```.
+After hibernating or suspending the laptop doesn't automatically connect to the wifi device again. So you have to restart NetworkManager with ```sudo sv restart NetworkManager```.
