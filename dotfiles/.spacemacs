@@ -612,6 +612,7 @@ This function is called at the very end of Spacemacs initialization."
      ((evil-collection))
      ((evil-collection))
      ((evil-collection))
+     ((evil-collection))
      ((evil-collection)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

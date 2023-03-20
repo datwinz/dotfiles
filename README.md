@@ -20,9 +20,11 @@
 * hplip
 * avahi
 * nss-mdns
-* gdm
+* accountsservice
+* emptty
 * wayfire
 * wf-shell
+* upower
 * mako
 * wlsunset
 * swayidle
@@ -35,6 +37,10 @@
 * qView
 * git
 * zsh
+* ncdu
+* emacs
+* zip
+* xz
 
 ## Modules
 
@@ -63,12 +69,19 @@ usbmouse.conf met inhoud:
 omit_drivers+=" usbmouse "
 ```
 
+## Firewall
+
+```
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+```
+
 ## Services
 
 ```
-NetworkManager  agetty-tty2  agetty-tty5   bluetoothd  cupsd  rsyslogd
-acpid           agetty-tty3  agetty-tty6   chronyd     dbus   udevd
-agetty-tty1     agetty-tty4  avahi-daemon  cronie      gdm    ufw
+acpid        agetty-tty3  agetty-tty6   chronyd  dbus            rsyslogd
+agetty-tty1  agetty-tty4  avahi-daemon  cronie   emptty          udevd
+agetty-tty2  agetty-tty5  bluetoothd    cupsd    NetworkManager  ufw
 ```
 
 ## Extra settings
@@ -99,4 +112,38 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### spacemacs
+
+```
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
+
+### ssh-agent
+
+Add to zshrc
+```
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+    echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
 ```
