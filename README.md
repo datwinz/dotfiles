@@ -147,3 +147,7 @@ else
     start_agent;
 fi
 ```
+
+## Bugs 
+
+After hibernating or suspending the laptop doesn't automatically connect to the wifi device again. So you have to restart NetworkManager with ```sudo sv restart NetworkManager``` and you may have to manually readd the device with ```nmcli device set wlp3s0 managed yes```.
