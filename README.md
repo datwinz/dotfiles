@@ -41,6 +41,11 @@
 * emacs
 * zip
 * xz
+* docker
+* docker-compose
+* libvirtd
+* qemu
+* virt-manager
 
 ## Modules
 
@@ -79,9 +84,10 @@ sudo ufw default deny incoming
 ## Services
 
 ```
-acpid        agetty-tty3  agetty-tty6   chronyd  dbus            rsyslogd
-agetty-tty1  agetty-tty4  avahi-daemon  cronie   emptty          udevd
-agetty-tty2  agetty-tty5  bluetoothd    cupsd    NetworkManager  ufw
+acpid        agetty-tty4   bluetoothd  dbus      NetworkManager  virtlockd
+agetty-tty1  agetty-tty5   chronyd     docker    rsyslogd        virtlogd
+agetty-tty2  agetty-tty6   cronie      emptty    udevd
+agetty-tty3  avahi-daemon  cupsd       libvirtd  ufw
 ```
 
 ## Extra settings
