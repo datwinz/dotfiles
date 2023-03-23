@@ -35,6 +35,7 @@
 * firefox
 * tomahawk
 * qView
+* libreoffice
 * git
 * zsh
 * ncdu
