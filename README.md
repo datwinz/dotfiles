@@ -1,52 +1,80 @@
-# Void Linux op Macbook Pro Late 2013 15"
+# Void Linux on Macbook Pro Late 2013 15"
 
 ## Packages
 
-* rsyslog
-* intel-ucode
-* cronie
-* chrony
-* broadcom-wl-dkms
-* ufw
-* ufw-extras
-* apparmor
-* dbus
-* elogind
+Output from ```xbps-query -m```.
+* 7zip
 * NetworkManager
-* mesa-dri
-* pulseaudio
-* bluez
-* cups
-* hplip
-* avahi
-* nss-mdns
+* Waybar
 * accountsservice
-* emptty
-* wayfire
-* wf-shell
-* upower
-* mako
-* wlsunset
-* swayidle
-* kitty
-* wofi
-* wlogout
-* light
-* firefox
-* tomahawk
-* qView
-* libreoffice
-* git
-* zsh
-* ncdu
-* emacs
-* zip
-* xz
+* apparmor
+* audit
+* avahi
+* base-system
+* bluez
+* broadcom-wl-dkms
+* chrony
+* cronie
+* cryptsetup
+* cups
+* curl
+* dbus
 * docker
 * docker-compose
-* libvirtd
+* elogind
+* emacs
+* emptty
+* firefox
+* git
+* grub-i386-efi
+* grub-x86_64-efi
+* hplip
+* intel-ucode
+* kbdlight
+* kitty
+* lf
+* libreoffice
+* libvirt
+* light
+* logrotate
+* lvm2
+* mako
+* mdadm
+* ncdu
+* network-manager-applet
+* nss-mdns
+* pulseaudio
 * qemu
+* rsyslog
+* swayidle
+* swaylock
+* switchboard
+* switchboard-plug-bluetooth
+* switchboard-plug-network
+* switchboard-plug-printers
+* texlive2023-bin
+* tomahawk
+* ufw
+* ufw-extras
+* unzip
+* upower
+* vim
 * virt-manager
+* void-docs-browse
+* void-repo-nonfree
+* wayfire
+* wf-shell
+* wget
+* wlogout
+* wlsunset
+* wofi
+* xdg-desktop-portal
+* xorg
+* xz
+* zathura
+* zathura-pdf-poppler
+* zip
+* zsh
 
 ## Modules
 
@@ -78,18 +106,27 @@ omit_drivers+=" usbmouse "
 ## Firewall
 
 ```
-sudo ufw default allow outgoing
-sudo ufw default deny incoming
+sudo ufw allow HPLIP
+sudo ufw allow CUPS
 ```
 
 ## Services
 
 ```
-acpid        agetty-tty4   bluetoothd  dbus      NetworkManager  virtlockd
-agetty-tty1  agetty-tty5   chronyd     docker    rsyslogd        virtlogd
-agetty-tty2  agetty-tty6   cronie      emptty    udevd
-agetty-tty3  avahi-daemon  cupsd       libvirtd  ufw
+acpid        agetty-tty4  avahi-daemon  cupsd   libvirtd        ufw
+agetty-tty1  agetty-tty5  bluetoothd    dbus    NetworkManager  virtlockd
+agetty-tty2  agetty-tty6  chronyd       docker  rsyslogd        virtlogd
+agetty-tty3  auditd       cronie        emptty  udevd
 ```
+## Tex
+
+### tlmgr packages
+
+* collection-langeuropean
+* collection-latexextra
+* collection-fontsrecommended
+* fontawesome5
+* physics
 
 ## Extra settings
 
@@ -160,3 +197,6 @@ fi
 ## Bugs 
 
 After hibernating or suspending the laptop doesn't automatically connect to the wifi device again. So you have to restart NetworkManager with ```sudo sv restart NetworkManager```.
+
+Do ```aa-complain /usr/libexec/virt-aa-helper```, because for some reason that one doesn't have permission(?) to add profiles for VMs to the apparmor.d/libvirt folder.
+
