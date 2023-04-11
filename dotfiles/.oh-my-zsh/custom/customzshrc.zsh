@@ -8,6 +8,9 @@ export EDITOR=/usr/bin/vim
 export MOZ_ENABLE_WAYLAND=1
 
 export SSH_ENV="$HOME/.ssh/environment"
+export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
+export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 
 # Autostart ssh-agent the Joseph M. Reagle way from https://web.archive.org/web/20210506080335/https://mah.everybody.org/docs/ssh#run-ssh-agent
 function start_agent {
