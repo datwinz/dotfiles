@@ -7,6 +7,7 @@ Output from ```xbps-query -m```.
 * NetworkManager
 * Waybar
 * accountsservice
+* alsa-plugins-pulseaudio
 * apparmor
 * audit
 * avahi
@@ -40,7 +41,9 @@ Output from ```xbps-query -m```.
 * lvm2
 * mako
 * mdadm
+* mpd
 * ncdu
+* ncmpcpp
 * network-manager-applet
 * nss-mdns
 * pulseaudio
@@ -53,7 +56,6 @@ Output from ```xbps-query -m```.
 * switchboard-plug-network
 * switchboard-plug-printers
 * texlive2023-bin
-* tomahawk
 * ufw
 * ufw-extras
 * unzip
@@ -113,10 +115,10 @@ sudo ufw allow CUPS
 ## Services
 
 ```
-acpid        agetty-tty4  avahi-daemon  cupsd   libvirtd        ufw
-agetty-tty1  agetty-tty5  bluetoothd    dbus    NetworkManager  virtlockd
-agetty-tty2  agetty-tty6  chronyd       docker  rsyslogd        virtlogd
-agetty-tty3  auditd       cronie        emptty  udevd
+acpid        agetty-tty4  avahi-daemon  cupsd   libvirtd        udevd
+agetty-tty1  agetty-tty5  bluetoothd    dbus    mpd             ufw
+agetty-tty2  agetty-tty6  chronyd       docker  NetworkManager  virtlockd
+agetty-tty3  auditd       cronie        emptty  rsyslogd        virtlogd
 ```
 ## Tex
 
@@ -136,7 +138,7 @@ Kernel command line arguments can be added through the GRUB bootloader by editin
 
 ### Regenerate initramfs
 
-```xbps-reconfigure --force linux<x>.<y>``` met het juiste versienummer.
+```xbps-reconfigure --force linux<x>.<y>``` with the right version number.
 
 ### Apparmor
 
