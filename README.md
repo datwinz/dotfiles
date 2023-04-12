@@ -5,7 +5,6 @@
 Output from ```xbps-query -m```.
 * 7zip
 * NetworkManager
-* Waybar
 * accountsservice
 * alsa-plugins-pulseaudio
 * apparmor
