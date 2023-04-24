@@ -25,6 +25,12 @@ Output from ```xbps-query -m```.
 * emacs
 * emptty
 * firefox
+* font-fira-otf
+* font-fira-ttf
+* font-libertine-otf
+* font-libertine-ttf
+* fonts-roboto-ttf
+* freefont-ttf
 * git
 * grub-i386-efi
 * grub-x86_64-efi
