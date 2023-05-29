@@ -61,6 +61,8 @@ Output from ```xbps-query -m```.
 * switchboard-plug-network
 * switchboard-plug-printers
 * texlive2023-bin
+* udiskie
+* udisks2
 * ufw
 * ufw-extras
 * unzip
@@ -82,7 +84,6 @@ Output from ```xbps-query -m```.
 * zathura-pdf-poppler
 * zip
 * zsh
-
 ## Modules
 
 ### /etc/modules-load.d/
