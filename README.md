@@ -137,6 +137,10 @@ agetty-tty3  auditd       cronie        emptty  rsyslogd        virtlogd
 
 ## Extra settings
 
+### Change to console
+
+fn + ctrl + alt + F[1-6] to change to the consoles/ttys. Your desktop probably runs on fn + ctrl + alt + F7.
+
 ### Change kernel / GRUB commandline
 
 Kernel command line arguments can be added through the GRUB bootloader by editing ```/etc/default/grub```, changing the ```GRUB_CMDLINE_LINUX_DEFAULT``` variable and then running ```update-grub```.
