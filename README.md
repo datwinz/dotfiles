@@ -32,6 +32,7 @@ Output from ```xbps-query -m```.
 * fonts-roboto-ttf
 * freefont-ttf
 * git
+* glow
 * grub-i386-efi
 * grub-x86_64-efi
 * hplip
@@ -84,6 +85,7 @@ Output from ```xbps-query -m```.
 * zathura-pdf-poppler
 * zip
 * zsh
+
 ## Modules
 
 ### /etc/modules-load.d/
@@ -205,6 +207,22 @@ else
     start_agent;
 fi
 ```
+
+### Package and other management
+
+```sudo xbps-install -Su``` to update all packages, ```sudo xbps-remove -Oo``` to clean cache and remove unnecessary packages.
+
+```sudo vkpurge rm all``` to remove old kernels, doesn't remove the packages so use the command above to do that.
+
+### Config management
+
+Use the [bare Git repo method](https://www.atlassian.com/git/tutorials/dotfiles). It uses ```config``` instead of ```git``` as commands by adding this line to zshrc:
+
+```
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+
+Other than that it uses the standard ```git``` commands such as ```add```, ```commit``` and ```push```.
 
 ## Bugs 
 
