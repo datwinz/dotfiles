@@ -52,6 +52,7 @@ Output from ```xbps-query -m```.
 * ncmpcpp
 * network-manager-applet
 * nss-mdns
+* preload
 * pulseaudio
 * qemu
 * rsyslog
@@ -84,6 +85,7 @@ Output from ```xbps-query -m```.
 * zathura
 * zathura-pdf-poppler
 * zip
+* zramen
 * zsh
 
 ## Modules
@@ -123,10 +125,11 @@ sudo ufw allow CUPS
 ## Services
 
 ```
-acpid        agetty-tty4  avahi-daemon  cupsd   libvirtd        udevd
-agetty-tty1  agetty-tty5  bluetoothd    dbus    mpd             ufw
-agetty-tty2  agetty-tty6  chronyd       docker  NetworkManager  virtlockd
-agetty-tty3  auditd       cronie        emptty  rsyslogd        virtlogd
+acpid        agetty-tty5   chronyd  emptty          rsyslogd
+agetty-tty1  agetty-tty6   cronie   libvirtd        udevd
+agetty-tty2  auditd        cupsd    mpd             ufw
+agetty-tty3  avahi-daemon  dbus     NetworkManager  virtlockd
+agetty-tty4  bluetoothd    docker   preload         virtlogd
 ```
 ## Tex
 
@@ -151,6 +154,10 @@ Kernel command line arguments can be added through the GRUB bootloader by editin
 ### Regenerate initramfs
 
 ```xbps-reconfigure --force linux<x>.<y>``` with the right version number.
+
+### zram
+
+The easiest way is with zramen. To enable zram do ```sudo zramen make```, to disable ```sudo zramen toss```. The default settings are probably fine.
 
 ### Apparmor
 
