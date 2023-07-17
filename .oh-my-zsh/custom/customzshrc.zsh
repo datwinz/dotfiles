@@ -8,7 +8,7 @@ export EDITOR=/usr/bin/vim
 export MOZ_ENABLE_WAYLAND=1
 
 export SSH_ENV="$HOME/.ssh/environment"
-export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux:~/.local/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 

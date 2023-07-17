@@ -88,6 +88,11 @@ Output from ```xbps-query -m```.
 * zramen
 * zsh
 
+### Other
+
+appimage of stackstorage from [Pakketmap](https://filehosting-client.transip.nl/packages/stack) in ~/Applications.
+[pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
+
 ## Modules
 
 ### /etc/modules-load.d/
