@@ -63,6 +63,7 @@ Output from ```xbps-query -m```.
 * switchboard-plug-network
 * switchboard-plug-printers
 * texlive2023-bin
+* tree
 * udiskie
 * udisks2
 * ufw
