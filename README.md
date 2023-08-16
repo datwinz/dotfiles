@@ -39,6 +39,7 @@ Output from ```xbps-query -m```.
 * intel-ucode
 * kbdlight
 * kitty
+* laptop-mode
 * lf
 * libreoffice
 * libvirt
@@ -52,6 +53,7 @@ Output from ```xbps-query -m```.
 * ncmpcpp
 * network-manager-applet
 * nss-mdns
+* powertop
 * preload
 * pulseaudio
 * qemu

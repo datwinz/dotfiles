@@ -12,6 +12,8 @@ export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux:~/.local/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 
+export LIBVA_DRIVER_NAME=i965
+
 # Autostart ssh-agent the Joseph M. Reagle way from https://web.archive.org/web/20210506080335/https://mah.everybody.org/docs/ssh#run-ssh-agent
 function start_agent {
     echo "Initialising new SSH agent..."
