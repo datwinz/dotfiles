@@ -1,7 +1,7 @@
 [Desktop Entry]
-Version=3.2.0
+Version=2.11.1
 Type=Application
 Name=stackstorage
 GenericName=Cloud
-Exec=/home/void/.local/bin/stack-v3.2.0.AppImage
+Exec=/home/void/.local/bin/stack-v2.11.1.AppImage
 Icon=/home/void/Pictures/stack-storage-icon-350x350.png
