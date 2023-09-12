@@ -133,11 +133,11 @@ sudo ufw allow CUPS
 ## Services
 
 ```
-acpid        agetty-tty5   chronyd  emptty          rsyslogd
-agetty-tty1  agetty-tty6   cronie   libvirtd        udevd
-agetty-tty2  auditd        cupsd    mpd             ufw
-agetty-tty3  avahi-daemon  dbus     NetworkManager  virtlockd
-agetty-tty4  bluetoothd    docker   preload         virtlogd
+acpid        agetty-tty5   chronyd  emptty          preload    virtlogd
+agetty-tty1  agetty-tty6   cronie   laptop-mode     rsyslogd
+agetty-tty2  auditd        cupsd    libvirtd        udevd
+agetty-tty3  avahi-daemon  dbus     mpd             ufw
+agetty-tty4  bluetoothd    docker   NetworkManager  virtlockd
 ```
 ## Tex
 
@@ -245,3 +245,4 @@ After hibernating or suspending the laptop doesn't automatically connect to the 
 
 Do ```aa-complain /usr/libexec/virt-aa-helper```, because for some reason that one doesn't have permission(?) to add profiles for VMs to the apparmor.d/libvirt folder.
 
+After resetting NVRAM the Mac OS and/or Opencore bootloader doesn't recognize Void linux. To fix this, burn [boot-repair-disk](https://sourceforge.net/p/boot-repair-cd/home/Home/) to a flash drive and run it.
