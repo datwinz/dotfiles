@@ -95,6 +95,8 @@ Output from ```xbps-query -m```.
 
 [AppImage of stackstorage from Pakketmap](https://filehosting-client.transip.nl/packages/stack) and [pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
 
+Set up gitleaks in gitlab with the [gitlab-endpoint-installer](https://gitlab.com/gitlab-com/gl-security/security-research/gitleaks-endpoint-installer). Basically just execute ```bash <(curl https://gitlab.com/gitlab-com/gl-security/security-research/gitleaks-endpoint-installer/-/raw/main/install.sh)``` and it will install, it expect no other git hooks are implemented yet.
+
 ## Firewall
 
 ```
