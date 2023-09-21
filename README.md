@@ -93,35 +93,7 @@ Output from ```xbps-query -m```.
 
 ### Other
 
-appimage of stackstorage from [Pakketmap](https://filehosting-client.transip.nl/packages/stack) in ~/Applications.
-[pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
-
-## Modules
-
-### /etc/modules-load.d/
-
-bcm5974.conf with contents:
-
-```
-# load bcm5974 (mouse)
-bcm5974
-```
-
-### /etc/modprobe.d/usbmouse.conf
-
-usbmouse.conf with contents:
-
-```
-blacklist usbmouse
-```
-
-### /etc/dracut.conf.d/usbmouse.conf
-
-usbmouse.conf with contents:
-
-```
-omit_drivers+=" usbmouse "
-```
+[AppImage of stackstorage from Pakketmap](https://filehosting-client.transip.nl/packages/stack) and [pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
 
 ## Firewall
 
@@ -133,11 +105,11 @@ sudo ufw allow CUPS
 ## Services
 
 ```
-acpid        agetty-tty5   chronyd  emptty          preload    virtlogd
-agetty-tty1  agetty-tty6   cronie   laptop-mode     rsyslogd
-agetty-tty2  auditd        cupsd    libvirtd        udevd
-agetty-tty3  avahi-daemon  dbus     mpd             ufw
-agetty-tty4  bluetoothd    docker   NetworkManager  virtlockd
+acpid        agetty-tty5   chronyd  emptty          powertop  virtlockd
+agetty-tty1  agetty-tty6   cronie   laptop-mode     preload   virtlogd
+agetty-tty2  auditd        cupsd    libvirtd        rsyslogd
+agetty-tty3  avahi-daemon  dbus     mpd             udevd
+agetty-tty4  bluetoothd    docker   NetworkManager  ufw
 ```
 ## Tex
 
@@ -161,7 +133,7 @@ Kernel command line arguments can be added through the GRUB bootloader by editin
 
 ### Regenerate initramfs
 
-```xbps-reconfigure --force linux<x>.<y>``` with the right version number.
+```xbps-reconfigure -fa```, this force configures all packages including making the initramfs. You also need to do this when making/modifying crypttab.
 
 ### zram
 
