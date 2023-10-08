@@ -109,7 +109,7 @@ sudo ufw allow CUPS
 ```
 acpid        agetty-tty5   chronyd  emptty          powertop  virtlockd
 agetty-tty1  agetty-tty6   cronie   laptop-mode     preload   virtlogd
-agetty-tty2  auditd        cupsd    libvirtd        rsyslogd
+agetty-tty2  auditd        cupsd    libvirtd        rsyslogd  zramen
 agetty-tty3  avahi-daemon  dbus     mpd             udevd
 agetty-tty4  bluetoothd    docker   NetworkManager  ufw
 ```
@@ -139,7 +139,7 @@ Kernel command line arguments can be added through the GRUB bootloader by editin
 
 ### zram
 
-The easiest way is with zramen. To enable zram do ```sudo zramen make```, to disable ```sudo zramen toss```. The default settings are probably fine.
+The easiest way is with zramen. To test zram do ```sudo zramen make```, to disable ```sudo zramen toss```. The default settings are probably fine. For permanent zram enable the zramen service.
 
 ### Apparmor
 
