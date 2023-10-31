@@ -20,6 +20,7 @@ Output from ```xbps-query -m```.
 * curl
 * dbus
 * docker
+* docker-buildx
 * docker-compose
 * elogind
 * emacs
@@ -220,3 +221,5 @@ After hibernating or suspending the laptop doesn't automatically connect to the 
 Do ```aa-complain /usr/libexec/virt-aa-helper```, because for some reason that one doesn't have permission(?) to add profiles for VMs to the apparmor.d/libvirt folder.
 
 After resetting NVRAM the Mac OS and/or Opencore bootloader doesn't recognize Void linux. To fix this, burn [boot-repair-disk](https://sourceforge.net/p/boot-repair-cd/home/Home/) to a flash drive and run it.
+
+Intel video isn't recognized automatically. There is a grub patch which fixes it, but you have to recompile grub with the patch for that to work. There are also other solutions, more info on [this stackexchange page](https://unix.stackexchange.com/questions/193425/enabling-intel-iris-pro-syslinux-tails-system-macbook-pro-15-retina-late-2013)
