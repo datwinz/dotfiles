@@ -6,7 +6,7 @@ Output from ```xbps-query -m```.
 * 7zip
 * NetworkManager
 * accountsservice
-* alsa-plugins-pulseaudio
+* alsa-pipewire
 * apparmor
 * audit
 * avahi
@@ -43,6 +43,7 @@ Output from ```xbps-query -m```.
 * laptop-mode
 * lf
 * libreoffice
+* libspa-bluetooth
 * libvirt
 * light
 * logrotate
@@ -54,9 +55,9 @@ Output from ```xbps-query -m```.
 * ncmpcpp
 * network-manager-applet
 * nss-mdns
+* pipewire
 * powertop
 * preload
-* pulseaudio
 * qemu
 * rsyslog
 * swayidle
