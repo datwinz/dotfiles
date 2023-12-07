@@ -6,6 +6,7 @@ alias la="ls -A"
 export XDG_CONFIG_HOME=/home/void/.config
 export EDITOR=/usr/bin/vim
 export MOZ_ENABLE_WAYLAND=1
+export LIBVA_DRIVER_NAME=i965
 
 export SSH_ENV="$HOME/.ssh/environment"
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux:~/.local/bin

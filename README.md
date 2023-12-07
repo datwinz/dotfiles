@@ -38,6 +38,7 @@ Output from ```xbps-query -m```.
 * grub-x86_64-efi
 * hplip
 * intel-ucode
+* intel-video-accel
 * kbdlight
 * kitty
 * laptop-mode
@@ -50,6 +51,7 @@ Output from ```xbps-query -m```.
 * lvm2
 * mako
 * mdadm
+* mesa-vulkan-intel
 * mpd
 * ncdu
 * ncmpcpp
@@ -92,7 +94,6 @@ Output from ```xbps-query -m```.
 * zip
 * zramen
 * zsh
-
 ### Other
 
 [AppImage of stackstorage from Pakketmap](https://filehosting-client.transip.nl/packages/stack) and [pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
@@ -109,11 +110,11 @@ sudo ufw allow CUPS
 ## Services
 
 ```
-acpid        agetty-tty5   chronyd  emptty          powertop  virtlockd
-agetty-tty1  agetty-tty6   cronie   laptop-mode     preload   virtlogd
-agetty-tty2  auditd        cupsd    libvirtd        rsyslogd  zramen
-agetty-tty3  avahi-daemon  dbus     mpd             udevd
-agetty-tty4  bluetoothd    docker   NetworkManager  ufw
+acpid        agetty-tty5   chronyd  emptty          preload    virtlogd
+agetty-tty1  agetty-tty6   cronie   laptop-mode     rsyslogd   zramen
+agetty-tty2  auditd        cupsd    libvirtd        udevd
+agetty-tty3  avahi-daemon  dbus     NetworkManager  ufw
+agetty-tty4  bluetoothd    docker   powertop        virtlockd
 ```
 ## Tex
 
@@ -223,4 +224,4 @@ Do ```aa-complain /usr/libexec/virt-aa-helper```, because for some reason that o
 
 After resetting NVRAM the Mac OS and/or Opencore bootloader doesn't recognize Void linux. To fix this, burn [boot-repair-disk](https://sourceforge.net/p/boot-repair-cd/home/Home/) to a flash drive and run it.
 
-Intel video isn't recognized automatically. There is a grub patch which fixes it, but you have to recompile grub with the patch for that to work. There are also other solutions, more info on [this stackexchange page](https://unix.stackexchange.com/questions/193425/enabling-intel-iris-pro-syslinux-tails-system-macbook-pro-15-retina-late-2013)
+Intel video isn't recognized automatically. There is a grub patch which fixes it, but you have to recompile grub with the patch for that to work. There are also other solutions, more info on [this stackexchange thread](https://unix.stackexchange.com/questions/193425/enabling-intel-iris-pro-syslinux-tails-system-macbook-pro-15-retina-late-2013). OpenCore Legacy Patcher can also patch this, so if you're dual booting you use that.
