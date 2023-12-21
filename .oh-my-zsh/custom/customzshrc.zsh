@@ -41,3 +41,4 @@ else
 fi
 
 alias config='/usr/bin/git --git-dir=/Users/floor/.cfg/ --work-tree=/Users/floor'
+alias configcm="config commit -m"

@@ -2,7 +2,7 @@
 syntax enable
 
 " Enable line numbers
-set number
+set number relativenumber
 
 " Ignore case when searching
 set ignorecase
