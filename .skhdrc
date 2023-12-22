@@ -3,24 +3,24 @@ cmd - return : open -na /System/Applications/Utilities/Terminal.app
 
 # yabai
   # focus window
-alt - j : yabai -m window --focus prev
-alt - k : yabai -m window --focus next
+alt - h : yabai -m window --focus prev
+alt - t : yabai -m window --focus next
 
   # swap window
-alt - h : yabai -m window --swap prev
-alt - l : yabai -m window --swap next
+alt - d : yabai -m window --swap prev
+alt - n : yabai -m window --swap next
 
   # warp window
-shift + alt - h : yabai -m window --warp west
-shift + alt - j : yabai -m window --warp south
-shift + alt - k : yabai -m window --warp north
-shift + alt - l : yabai -m window --warp east
+shift + alt - d : yabai -m window --warp west
+shift + alt - h : yabai -m window --warp south
+shift + alt - t : yabai -m window --warp north
+shift + alt - n : yabai -m window --warp east
 
   # balance size of windows
 shift + alt - 0 : yabai -m space --balance
 
   # float window
-alt - t : yabai -m window --toggle float ; yabai -m window --layer below
+alt - y : yabai -m window --toggle float ; yabai -m window --layer below
 
   # make floating window float and fill screen
 shift + alt - up : yabai -m window --toggle float ; yabai -m window --layer below ; yabai -m window --grid 1:1:0:0:1:1
@@ -38,8 +38,8 @@ alt - space : yabai -m space --rotate 90
 shift + alt - space : yabai -m space --rotate 270 
 
   # toggle float/bsp for whole space
-alt + shift - t : yabai -m space --layout float
-alt + shift - b : yabai -m space --layout bsp
+alt + shift - y : yabai -m space --layout float
+alt + shift - x : yabai -m space --layout bsp
 
   # quickly restart the yabai launch agent
 shift + ctrl + alt - 0 : yabai --restart-service
