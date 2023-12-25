@@ -17,11 +17,23 @@ set hlsearch
 " Map <Space> to / (search)
 map <space> /
 
+" Dvorak keybindings
+" Moving
+no h j
+no t k
+no d h
+no n l
+" Delete
+no j d
+" Next/prev line
+no l n
+no L N
+
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map <C-h> <C-W>j
+map <C-t> <C-W>k
+map <C-d> <C-W>h
+map <C-n> <C-W>l
 
 " Tab options
 " Auto tab smartst, smarter, smart
