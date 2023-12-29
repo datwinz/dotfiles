@@ -1,5 +1,4 @@
-#UUID=1638-4F19 /boot/efi vfat defaults 0 2
+UUID=899c7ab2-8f3a-44ad-9d04-7f1eae2a823f / xfs defaults,compress=zstd 0 0
+UUID=9B6E-89F1 /boot/efi vfat defaults 0 2
+UUID=18f6d41f-6eee-4ad8-ac75-39711404bcc1 /home btrfs defaults,compress=zstd 0 0
 tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
-UUID=1638-4F19  /boot/efi       vfat    defaults      0       1
-UUID=d0e4bd8c-739b-4fa0-a593-43506c370de9 / btrfs defaults,compress=zstd 0 0
-UUID=ed9e3f57-91bf-4145-ae57-d161bd6d7b2b /home  btrfs  defaults,compress=zstd  0 0
