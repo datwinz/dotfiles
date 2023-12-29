@@ -11,4 +11,5 @@
 # data2        /dev/hda5        /etc/cryptfs.key
 # swap         /dev/hdx4        /dev/urandom            swap,cipher=aes-cbc-essiv:sha256,size=256
 # vol          /dev/hdb7        none
-void-home  UUID=663558eb-f538-4ade-a492-1657164f602d  none  luks
+void-home	UUID=3e551e3f-3cf5-4863-bcdb-f100a6398e30	none	luks
+
