@@ -25,9 +25,23 @@ no d h
 no n l
 " Delete
 no j d
-" Next/prev line
+" Next/prev search
 no l n
 no L N
+" Netrw
+augroup netrw_dvorak_fix
+    autocmd!
+    autocmd filetype netrw call Fix_netrw_maps_for_dvorak()
+augroup END
+function! Fix_netrw_maps_for_dvorak()
+    no <buffer> h j
+    no <buffer> t k
+    no <buffer> d h
+    no <buffer> n l
+    " Next/prev line
+endfunction
+" Remove Ex mode
+map Q <Nop>
 
 " Smart way to move between windows
 map <C-h> <C-W>j
