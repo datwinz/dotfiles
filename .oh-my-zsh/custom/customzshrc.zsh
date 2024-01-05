@@ -4,6 +4,7 @@ alias help="man"
 alias la="ls -A"
 alias yabairestart="yabai --restart-service"
 alias bclm77="sudo bclm write 77"
+alias vim="nvim"
 
 alias brews="brew search"
 
