@@ -14,8 +14,12 @@ set incsearch
 set hlsearch
 
 " Vim keymaps
-" Map <Space> to / (search)
-map <space> /
+" Map space as leader
+let mapleader=" "
+
+"Netrw options
+let g:netrw_banner = 0
+map <Leader>gf :Explore<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
