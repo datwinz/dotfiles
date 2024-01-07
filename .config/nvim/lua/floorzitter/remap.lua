@@ -8,4 +8,11 @@ vim.keymap.set('','<C-h>','<C-W>h')
 vim.keymap.set('','<C-l>','<C-W>l')
 
 -- Open netrw
-vim.keymap.set('n','<leader>gf', vim.cmd.Ex)
+vim.keymap.set('','<leader>gf', vim.cmd.Ex)
+
+-- Terminal commands
+vim.keymap.set('t','<Esc>',[[<C-\><C-N>]])
+
+-- Fat finger avoidance
+vim.keymap.set('c','W','w')
+vim.keymap.set('c','Q','q')
