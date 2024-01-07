@@ -27,6 +27,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Fat finger avoidance
+cmap Q q
+cmap W w
+
 " Tab options
 " Auto tab smartst, smarter, smart
 filetype on
