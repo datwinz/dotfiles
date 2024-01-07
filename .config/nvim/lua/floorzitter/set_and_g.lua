@@ -4,7 +4,7 @@ vim.opt.mousescroll = 'ver:1,hor:1'
 -- Cursor look
 vim.opt.guicursor = 'i:block'
 -- Standard is mouse = nvi, do mouse = vi for scroll the cursor instead of the page
---vim.opt.mouse = vi
+vim.opt.mouse = ''
 
 -- Enable syntax highlighting
 vim.opt.number = true
