@@ -25,4 +25,11 @@ require('pckr').add{
     { 'nvim-telescope/telescope.nvim',
         tag = '0.1.5',
         requires = { 'nvim-lua/plenary.nvim'} };
+    -- Mason for LSP language servers
+    { 'williamboman/mason.nvim' };
+    { 'williamboman/mason-lspconfig.nvim' };
+    -- LSP Support
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' };
+    { 'neovim/nvim-lspconfig', requires = { 'hrsh7th/cmp-nvim-lsp' } };
+    { 'hrsh7th/nvim-cmp', requires = { 'L3MON4D3/LuaSnip' } };
 };
