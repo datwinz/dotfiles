@@ -23,12 +23,19 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      -- require'snippy'.expand_snippet(args.body) -- For `snippy` users.
+      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+    end,
+  },
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
-
-    -- Ctrl+Space to trigger completion menu
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<Tab>'] = cmp.mapping.confirm({select = true}),
+    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
 
     -- Navigate between snippet placeholder
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
@@ -37,5 +44,11 @@ cmp.setup({
     -- Scroll up and down in the completion documentation
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
-  })
+  }),
+  sources = {
+    {name = 'buffer'},
+    {name = 'cmdline'},
+    {name = 'luasnip'},
+    {name = 'path'},
+  },
 })
