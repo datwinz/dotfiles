@@ -1,5 +1,6 @@
-# open terminal
+# open Applications
 cmd - return : open -na /System/Applications/Utilities/Terminal.app
+cmd + shift - return : open /Users/floor/ 
 
 # yabai
   # focus window
