@@ -26,3 +26,6 @@ vim.opt.shiftwidth = 4
 
 -- Colorscheme
 vim.cmd.colorscheme('customonehalflight')
+
+-- Netrw
+vim.g.netrw_banner = 0
