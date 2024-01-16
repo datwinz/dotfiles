@@ -17,3 +17,6 @@ vim.keymap.set('t','<Esc>',[[<C-\><C-N>]])
 -- Fat finger avoidance
 vim.keymap.set('c','W','w')
 vim.keymap.set('c','Q','q')
+
+-- Windows
+vim.keymap.set('','<leader>c',vim.cmd.close)
