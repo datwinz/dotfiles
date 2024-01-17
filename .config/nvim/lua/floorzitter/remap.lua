@@ -22,5 +22,5 @@ vim.keymap.set('c','Q','q')
 vim.keymap.set('','<leader>c',vim.cmd.close)
 
 -- Lines
-vim.keymap.set('','K','ddkP')
-vim.keymap.set('','J','ddp')
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
