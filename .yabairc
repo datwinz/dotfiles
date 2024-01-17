@@ -41,7 +41,7 @@ yabai -m config                                 \
     mouse_drop_action            swap
 
 # rules
-yabai -m rule --add app="^Systeemvoorkeuren$" manage=off layer=below
+yabai -m rule --add app="^Systeeminstellingen$" manage=off layer=below
 yabai -m rule --add app="^VirtualBox VM$" manage=off layer=below
 yabai -m rule --add app="^VirtualBox$" manage=off layer=below
 yabai -m rule --add app="^Logseq$" manage=off layer=below
