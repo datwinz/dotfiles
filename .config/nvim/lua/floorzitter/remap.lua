@@ -20,3 +20,7 @@ vim.keymap.set('c','Q','q')
 
 -- Windows
 vim.keymap.set('','<leader>c',vim.cmd.close)
+
+-- Lines
+vim.keymap.set('','K','ddkP')
+vim.keymap.set('','J','ddp')
