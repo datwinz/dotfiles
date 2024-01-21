@@ -1,5 +1,12 @@
+call plug#begin()
+" Using https://github.com/junegunn/vim-plug
+Plug 'tpope/vim-sensible'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+call plug#end()
+
 " Enable syntax highlighting
 syntax enable
+colorscheme onehalflight
 
 " Enable line numbers
 set number relativenumber
@@ -31,6 +38,11 @@ map <C-l> <C-W>l
 cmap Q q
 cmap W w
 
+" Windows
+map <leader>c :close<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Tab options
 " Auto tab smartst, smarter, smart
 filetype on
@@ -42,8 +54,3 @@ set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
-
-call plug#begin()
-" Using https://github.com/junegunn/vim-plug
-Plug 'tpope/vim-sensible'
-call plug#end()
