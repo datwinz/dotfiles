@@ -10,7 +10,7 @@ alias brews="brew search"
 
 alias brewi="brew install"
 alias brewu="brew uninstall"
-alias brewuz="brew uninstall --zap"
+alias brewuz="brew uninstall --zap --force"
 alias brewh="brew home"
 alias brewls="brew ls"
 
