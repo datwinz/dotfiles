@@ -1,8 +1,15 @@
+call plug#begin()
+" Using https://github.com/junegunn/vim-plug
+Plug 'tpope/vim-sensible'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+call plug#end()
+
 " Enable syntax highlighting
 syntax enable
+colorscheme onehalflight
 
 " Enable line numbers
-set number
+set number relativenumber
 
 " Ignore case when searching
 set ignorecase
@@ -14,14 +21,27 @@ set incsearch
 set hlsearch
 
 " Vim keymaps
-" Map <Space> to / (search)
-map <space> /
+" Map space as leader
+let mapleader=" "
+
+"Netrw options
+let g:netrw_banner = 0
+map <Leader>gf :Explore<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Fat finger avoidance
+cmap Q q
+cmap W w
+
+" Windows
+map <leader>c :close<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Tab options
 " Auto tab smartst, smarter, smart
@@ -34,8 +54,3 @@ set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
-
-call plug#begin()
-" Using https://github.com/junegunn/vim-plug
-Plug 'tpope/vim-sensible'
-call plug#end()
