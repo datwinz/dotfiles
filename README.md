@@ -18,7 +18,6 @@ Output from ```xbps-query -m```.
 * cryptsetup
 * cups
 * curl
-* dbus
 * docker
 * docker-buildx
 * docker-compose
@@ -55,6 +54,7 @@ Output from ```xbps-query -m```.
 * mpd
 * ncdu
 * ncmpcpp
+* neovim
 * network-manager-applet
 * nss-mdns
 * pipewire
@@ -68,10 +68,9 @@ Output from ```xbps-query -m```.
 * switchboard-plug-bluetooth
 * switchboard-plug-network
 * switchboard-plug-printers
-* texlive2023-bin
+* texlive-bin
 * tree
 * udiskie
-* udisks2
 * ufw
 * ufw-extras
 * unzip
@@ -82,18 +81,17 @@ Output from ```xbps-query -m```.
 * void-repo-nonfree
 * wayfire
 * wf-shell
-* wget
 * wlogout
 * wlsunset
 * wofi
 * xdg-desktop-portal
 * xorg
-* xz
 * zathura
 * zathura-pdf-poppler
 * zip
 * zramen
 * zsh
+
 ### Other
 
 [AppImage of stackstorage from Pakketmap](https://filehosting-client.transip.nl/packages/stack) and [pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
