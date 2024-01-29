@@ -29,3 +29,5 @@ vim.cmd.colorscheme('customonehalflight')
 
 -- Netrw
 vim.g.netrw_banner = 0
+
+vim.opt.undofile = true
