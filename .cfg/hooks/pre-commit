@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -n $I_WANT_GITLEAKS_SKIP ]]
+  then
+  exit 0
+fi
+
+MSG="\n\n\033[31mCommit failed.\n\n\033[0mgitleaks has detected some secrets in your commit."
+/usr/local/bin/gitleaks protect --staged --redact --verbose || (printf "${MSG}" ; exit -1)
