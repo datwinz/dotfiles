@@ -1,20 +1,33 @@
+# Aliases
 alias fucking="sudo"
 alias please="sudo"
 alias help="man"
 alias la="ls -A"
+
+## Dotfile Bare Git Repo
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias configa="config add"
+alias configcm="config commit -m"
+alias configst="config status"
+alias configlog="config log --oneline --decorate --graph"
+alias configd="config diff"
+alias configds="config diff --staged"
+alias configrs="config restore"
+alias configrst="config restore --staged"
 
 unalias md
 function md() {
     mkdir -p "${1}" && cd "${1}"
 }
 
+# Environment variables
 export XDG_CONFIG_HOME=/home/void/.config
 export EDITOR=/usr/bin/vim
 export MOZ_ENABLE_WAYLAND=1
 export LIBVA_DRIVER_NAME=i965
 
 export SSH_ENV="$HOME/.ssh/environment"
-export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux:~/.local/bin
+export PATH=$PATH:/opt/texlive/2023/bin/x86_64-linux:~/.local/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2023/texmf-dist/doc/info
 
@@ -28,8 +41,7 @@ function start_agent {
     /usr/bin/ssh-add;
 }
 
-# Source SSH settings, if applicable
-                              
+# Source SSH settings, if applicable                              
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
     #ps ${SSH_AGENT_PID} doesn't work under cywgin
@@ -39,7 +51,3 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
-
-# Dotfile Bare Git Repo
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias configcm="config commit -m"
