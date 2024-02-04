@@ -225,6 +225,9 @@ bar {
 
 include /etc/sway/config.d/*
 
+# Keyboard brightness control
+bindsym XF86KbdBrightnessUp exec kbdlight up 5
+bindsym XF86KbdBrightnessDown exec kbdlight down 5
 
 # Volume control
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
