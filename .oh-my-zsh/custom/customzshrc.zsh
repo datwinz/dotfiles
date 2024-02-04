@@ -3,6 +3,11 @@ alias please="sudo"
 alias help="man"
 alias la="ls -A"
 
+unalias md
+function md() {
+    mkdir -p "${1}" && cd "${1}"
+}
+
 export XDG_CONFIG_HOME=/home/void/.config
 export EDITOR=/usr/bin/vim
 export MOZ_ENABLE_WAYLAND=1
