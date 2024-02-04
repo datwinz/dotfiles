@@ -61,7 +61,9 @@ Output from ```xbps-query -m```.
 * powertop
 * preload
 * qemu
+* ripgrep
 * rsyslog
+* sway
 * swayidle
 * swaylock
 * switchboard
@@ -69,6 +71,7 @@ Output from ```xbps-query -m```.
 * switchboard-plug-network
 * switchboard-plug-printers
 * texlive-bin
+* tofi
 * tree
 * udiskie
 * ufw
