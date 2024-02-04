@@ -126,6 +126,32 @@ agetty-tty4  bluetoothd    docker   powertop        virtlockd
 
 ## Extra settings
 
+### Partitions and volumes
+
+My root is an XFS partition and my home is BTRFS. I mounted the libvirt folder as a BTRFS subvolume like this.
+
+```bash
+mkdir /home/void/.lib/libvirt
+sudo mount -t btrfs -o subvolid=257,defaults /dev/disk/by-uuid/6506ff97-3841-4ed3-9062-3827b06467b2 /var/lib/libvirt
+```
+
+I automount the subvolume in my fstab. In the end ```lsblk``` looks like this:
+
+```
+NAME          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+sda             8:0    0 465.9G  0 disk
+├─sda1          8:1    0   200M  0 part
+├─sda2          8:2    0 372.5G  0 part
+├─sda3          8:3    0   200M  0 part  /boot/efi
+├─sda4          8:4    0    20G  0 part  /var/lib/docker
+│                                        /
+└─sda5          8:5    0    73G  0 part
+  └─void-home 254:0    0    73G  0 crypt /var/lib/libvirt
+                                         /home
+sdb             8:16   1     0B  0 disk
+zram0         253:0    0   3.9G  0 disk  [SWAP]
+```
+
 ### Change to console
 
 fn + ctrl + alt + F[1-6] to change to the consoles/ttys. Your desktop probably runs on fn + ctrl + alt + F7.
