@@ -2,4 +2,4 @@ UUID=899c7ab2-8f3a-44ad-9d04-7f1eae2a823f / xfs defaults 0 0
 UUID=9B6E-89F1 /boot/efi vfat defaults 0 2
 UUID=6506ff97-3841-4ed3-9062-3827b06467b2 /home btrfs defaults,compress=zstd 0 0
 UUID=6506ff97-3841-4ed3-9062-3827b06467b2 /var/lib/libvirt btrfs defaults,subvolid=257 0 0
-tmpfs /tmp tmpfs defaults,nouid,nodev 0 0
+tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
