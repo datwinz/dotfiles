@@ -229,6 +229,10 @@ include /etc/sway/config.d/*
 bindsym XF86KbdBrightnessUp exec kbdlight up 5
 bindsym XF86KbdBrightnessDown exec kbdlight down 5
 
+# Screen brightness control
+bindsym XF86MonBrightnessUp exec light -A 1
+bindsym XF86MonBrightnessDown exec light -U 1
+
 # Volume control
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
