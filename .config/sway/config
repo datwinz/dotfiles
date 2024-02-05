@@ -242,7 +242,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 exec pipewire
 exec mpd
 exec udiskie
-exec stack-v2.11.1.AppImage
+exec stack.AppImage
 exec wlsunset -l 52.5 -L 6.0
 
 # Other settings
