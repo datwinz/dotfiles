@@ -99,7 +99,7 @@ Output from ```xbps-query -m```.
 
 [AppImage of stackstorage from Pakketmap](https://filehosting-client.transip.nl/packages/stack) and [pistol from releases](https://github.com/doronbehar/pistol/releases) in ~/.local/bin.
 
-Set up gitleaks in gitlab with the [gitlab-endpoint-installer](https://gitlab.com/gitlab-com/gl-security/security-research/gitleaks-endpoint-installer). Basically just execute ```bash <(curl https://gitlab.com/gitlab-com/gl-security/security-research/gitleaks-endpoint-installer/-/raw/main/install.sh)``` and it will install, it expect no other git hooks are implemented yet.
+Set up gitleaks in gitlab with the [gitlab-endpoint-installer](https://gitlab.com/gitlab-com/gl-security/security-research/gitleaks-endpoint-installer). Basically just execute ```bash <(curl https://gitlab.com/gitlab-com/gl-security/security-research/gitleaks-endpoint-installer/-/raw/main/install.sh)``` and it will install, it expects no other git hooks are implemented yet.
 
 ## Firewall
 
@@ -153,6 +153,14 @@ sda             8:0    0 465.9G  0 disk
                                          /home
 sdb             8:16   1     0B  0 disk
 zram0         253:0    0   3.9G  0 disk  [SWAP]
+```
+
+### Groups
+
+The groups my admin user is apart of are below:
+
+```
+UID=1000(void) GID=1000(void) groups=1000(void),4(wheel),8(floppy),12(audio),13(video),16(cdrom),17(optical),24(kvm),101(xbuilder),990(libvirt),993(docker),994(lpadmin)
 ```
 
 ### Change to console
