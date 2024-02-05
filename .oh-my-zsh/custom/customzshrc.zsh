@@ -10,8 +10,8 @@ alias bclm77="sudo bclm write 77"
 
 alias vim="nvim"
 
-alias config='/usr/bin/git --git-dir=/Users/floor/.cfg/ --work-tree=/Users/floor'
-alias configa"config add"
+alias config="/usr/bin/git --git-dir=/Users/floor/.cfg/ --work-tree=/Users/floor"
+alias configa="config add"
 alias configcm="config commit -m"
 alias configst="config status"
 alias configlog="config log --oneline --decorate --graph"
@@ -61,4 +61,3 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
-
