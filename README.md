@@ -63,7 +63,7 @@ Output from ```xbps-query -m```.
 * qemu
 * ripgrep
 * rsyslog
-* swayfx
+* sway
 * swayidle
 * swaylock
 * switchboard
