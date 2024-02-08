@@ -247,4 +247,3 @@ exec wlsunset -l 52.5 -L 6.0
 
 # Other settings
 mouse_warping container
-shadows enable
