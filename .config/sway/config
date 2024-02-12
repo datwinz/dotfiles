@@ -244,6 +244,7 @@ exec mpd
 exec udiskie
 exec stack.AppImage
 exec wlsunset -l 52.5 -L 6.0
+exec mako
 
 # Other settings
 mouse_warping container
