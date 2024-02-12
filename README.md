@@ -5,6 +5,7 @@
 Output from ```xbps-query -m```.
 * 7zip
 * NetworkManager
+* Waybar
 * accountsservice
 * alsa-pipewire
 * apparmor
@@ -62,6 +63,7 @@ Output from ```xbps-query -m```.
 * preload
 * qemu
 * ripgrep
+* river
 * rsyslog
 * sway
 * swayidle
