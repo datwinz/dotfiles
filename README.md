@@ -58,6 +58,7 @@ Output from ```xbps-query -m```.
 * neovim
 * network-manager-applet
 * nss-mdns
+* pavucontrol
 * pipewire
 * powertop
 * preload
@@ -84,6 +85,7 @@ Output from ```xbps-query -m```.
 * virt-manager
 * void-docs-browse
 * void-repo-nonfree
+* way-displays
 * wayfire
 * wf-shell
 * wlogout
