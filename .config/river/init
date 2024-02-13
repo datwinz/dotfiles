@@ -171,7 +171,7 @@ riverctl map normal Super D spawn wofi
 
 riverctl spawn 'way-displays'
 riverctl spawn 'swaybg -i /home/void/Pictures/Backgrounds/shadow-of-the-colossus-wallpaper-movie-coming-HD.png'
-riverctl spawn 'waybar'
+riverctl spawn 'waybar -c /home/void/.config/waybar/config_river'
 riverctl spawn 'pipewire'
 riverctl spawn 'mpd'
 riverctl spawn 'udiskie'
