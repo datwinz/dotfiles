@@ -4,12 +4,9 @@ alias please="sudo"
 alias help="man"
 alias la="ls -A"
 
-alias yabairestart="yabai --restart-service"
-
-alias bclm77="sudo bclm write 77"
-
 alias vim="nvim"
 
+## Dotfile Bare Git Repo
 alias config="/usr/bin/git --git-dir=/Users/floor/.cfg/ --work-tree=/Users/floor"
 alias configa="config add"
 alias configcm="config commit -m"
@@ -25,20 +22,7 @@ function md() {
     mkdir -p "${1}" && cd "${1}"
 }
 
-# Package manager aliases
-alias brews="brew search"
-alias brewi="brew install"
-alias brewu="brew uninstall"
-alias brewuz="brew uninstall --zap --force"
-alias brewh="brew home"
-alias brewls="brew ls"
-
-# Environment variables
-export PATH="/usr/local/sbin:$PATH:/Users/floor/.local/bin"
-export YSU_MESSAGE_POSITION="after" 
-export YSU_MODE=ALL
-
-# ssh-agent autostarten op een zichtbare manier
+# Autostart ssh-agent the Joseph M. Reagle way from https://web.archive.org/web/20210506080335/https://mah.everybody.org/docs/ssh#run-ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
@@ -61,3 +45,21 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+# Mac-specific
+alias yabairestart="yabai --restart-service"
+
+alias bclm77="sudo bclm write 77"
+
+# Package manager aliases
+alias brews="brew search"
+alias brewi="brew install"
+alias brewu="brew uninstall"
+alias brewuz="brew uninstall --zap --force"
+alias brewh="brew home"
+alias brewls="brew ls"
+
+# Environment variables
+export PATH="/usr/local/sbin:$PATH:/Users/floor/.local/bin"
+export YSU_MESSAGE_POSITION="after" 
+export YSU_MODE=ALL
