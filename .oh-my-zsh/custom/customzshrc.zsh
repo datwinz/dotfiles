@@ -4,7 +4,7 @@ alias please="sudo"
 alias help="man"
 alias la="ls -A"
 
-alias vim = "nvim"
+alias vim="nvim"
 
 ## Dotfile Bare Git Repo
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
