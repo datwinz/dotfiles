@@ -1,4 +1,4 @@
-# Persoonlijke aliases
+# Personal aliases
 alias fucking="sudo"
 alias please="sudo"
 alias help="man"
@@ -21,6 +21,10 @@ unalias md
 function md() {
     mkdir -p "${1}" && cd "${1}"
 }
+
+# Environment variables
+export YSU_MESSAGE_POSITION="after" 
+export YSU_MODE=ALL
 
 # Autostart ssh-agent the Joseph M. Reagle way from https://web.archive.org/web/20210506080335/https://mah.everybody.org/docs/ssh#run-ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
@@ -47,6 +51,7 @@ else
 fi
 
 # Mac-specific
+# Aliases
 alias yabairestart="yabai --restart-service"
 
 alias bclm77="sudo bclm write 77"
@@ -61,5 +66,3 @@ alias brewls="brew ls"
 
 # Environment variables
 export PATH="/usr/local/sbin:$PATH:/Users/floor/.local/bin"
-export YSU_MESSAGE_POSITION="after" 
-export YSU_MODE=ALL
