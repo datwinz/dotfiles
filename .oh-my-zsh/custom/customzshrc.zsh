@@ -22,6 +22,10 @@ function md() {
     mkdir -p "${1}" && cd "${1}"
 }
 
+# Environment variables
+export YSU_MESSAGE_POSITION="after" 
+export YSU_MODE=ALL
+
 # Autostart ssh-agent the Joseph M. Reagle way from https://web.archive.org/web/20210506080335/https://mah.everybody.org/docs/ssh#run-ssh-agent
 export SSH_ENV="$HOME/.ssh/environment"
 
