@@ -101,5 +101,5 @@ set wrapscroll true
 set mouse true
 set drawbox true
 
-setlocal /Users/floor/Downloads/ sortby time
-setlocal /Users/floor/Downloads/ reverse
+setlocal ~/Downloads/ sortby time
+setlocal ~/Downloads/ reverse
