@@ -167,7 +167,8 @@ rivertile -view-padding 6 -outer-padding 6 &
 
 # My rules
 riverctl map normal Super Escape spawn swaylock
-riverctl map normal Super D spawn wofi
+riverctl map normal Super+Shift Escape spawn 'wlogout -p layer-shell'
+riverctl map normal Super D spawn 'tofi-run | xargs riverctl spawn'
 
 riverctl spawn 'way-displays'
 riverctl spawn 'swaybg -i /home/void/Pictures/Backgrounds/shadow-of-the-colossus-wallpaper-movie-coming-HD.png'
@@ -180,4 +181,5 @@ riverctl spawn 'wlsunset -l 52.5 -L 6.0'
 riverctl spawn 'mako'
 
 riverctl input pointer-1452-610-bcm5974 tap enabled
+riverctl input pointer-1452-610-bcm5974 natural-scroll disabled
 riverctl set-cursor-warp on-focus-change

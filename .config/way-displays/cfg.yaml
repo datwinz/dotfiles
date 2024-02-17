@@ -33,7 +33,7 @@ SCALE:
   #- NAME_DESC: 'monitor description'
   #  SCALE: 1.75
   - NAME_DESC: 'eDP-1'
-    SCALE: 1.75
+    SCALE: 2
 
 # Override the preferred mode.
 # WARNING: this may result in an unusable display. See https://github.com/alex-courtis/way-displays#known-issues-with-workarounds

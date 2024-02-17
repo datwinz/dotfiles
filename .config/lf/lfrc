@@ -99,6 +99,10 @@ cmd zip ${{
 }}
 set wrapscroll true
 set mouse true
+set drawbox true
 
 set previewer ~/.config/lf/lf_kitty_preview
 set cleaner ~/.config/lf/lf_kitty_clean
+
+setlocal ~/Downloads/ sortby time
+setlocal ~/Downloads/ reverse

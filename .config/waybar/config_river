@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["river/tags", "river/mode"],
     "modules-center": ["river/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock"],
+    "modules-right": ["idle_inhibitor", "wireplumber", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock"],
     // Modules configuration
     "river/tags": {
         "num-tags": 4,
@@ -80,24 +80,14 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-connection-editor"
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon}➿ {format_source}",
-        "format-bluetooth-muted": "🔇 {icon}➿ {format_source}",
-        "format-muted": "🔇 {format_source}",
-        "format-source": "{volume}% 🎛️",
-        "format-source-muted": "🔇",
-        "format-icons": {
-            "headphone": "🎧",
-            "hands-free": "🎧",
-            "headset": "🎧",
-            "phone": "📱",
-            "portable": "📱",
-            "car": "🚗",
-            "default": ["🔊"]
-        },
-        "on-click": "pavucontrol"
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}➿",
+        "format-bluetooth-muted": "🔇 {icon}➿",
+        "format-muted": "🔇",
+        "format-icons": "🔊",
+        "on-click": "pavucontrol",
+        "scroll-step": 0.2
     },
 }
 

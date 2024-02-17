@@ -53,7 +53,7 @@ fi
 # Linux-specific
 # Environment variables
 export XDG_CONFIG_HOME=/home/void/.config
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export MOZ_ENABLE_WAYLAND=1
 export LIBVA_DRIVER_NAME=i965
 export PATH=$PATH:/opt/texlive/2023/bin/x86_64-linux:~/.local/bin
