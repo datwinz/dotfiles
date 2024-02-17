@@ -180,4 +180,5 @@ riverctl spawn 'wlsunset -l 52.5 -L 6.0'
 riverctl spawn 'mako'
 
 riverctl input pointer-1452-610-bcm5974 tap enabled
+riverctl input pointer-1452-610-bcm5974 natural-scroll disabled
 riverctl set-cursor-warp on-focus-change

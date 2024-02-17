@@ -59,6 +59,7 @@ output * bg /home/void/Pictures/Sway-Cheatsheet.png stretch
 # Read `man 5 sway-input` for more information about this section.
 input "1452:610:bcm5974" {
     tap enabled
+    natural_scroll disabled
 }
 
 ### Key bindings
