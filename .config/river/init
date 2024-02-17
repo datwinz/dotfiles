@@ -167,6 +167,7 @@ rivertile -view-padding 6 -outer-padding 6 &
 
 # My rules
 riverctl map normal Super Escape spawn swaylock
+riverctl map normal Super+Shift Escape spawn 'wlogout -p layer-shell'
 riverctl map normal Super D spawn 'tofi-run | xargs riverctl spawn'
 
 riverctl spawn 'way-displays'
