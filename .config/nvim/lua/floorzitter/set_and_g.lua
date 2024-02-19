@@ -33,3 +33,4 @@ vim.g.netrw_banner = 0
 vim.opt.undofile = true
 
 vim.opt.colorcolumn = "95"
+vim.cmd.highlight('ColorColumn ctermbg=Gray')
