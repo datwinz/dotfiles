@@ -179,6 +179,8 @@ riverctl spawn 'udiskie'
 riverctl spawn '/home/void/.local/bin/stack.AppImage'
 riverctl spawn 'wlsunset -l 52.5 -L 6.0'
 riverctl spawn 'mako'
+riverctl spawn '/usr/libexec/policykit-1-pantheon/io.elementary.desktop.agent-polkit'
+
 
 riverctl input pointer-1452-610-bcm5974 tap enabled
 riverctl input pointer-1452-610-bcm5974 natural-scroll disabled

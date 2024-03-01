@@ -247,6 +247,7 @@ exec udiskie
 exec /home/void/.local/bin/stack.AppImage
 exec wlsunset -l 52.5 -L 6.0
 exec mako
+exec /usr/libexec/policykit-1-pantheon/io.elementary.desktop.agent-polkit
 
 # Other settings
 mouse_warping container

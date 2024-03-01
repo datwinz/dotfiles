@@ -58,6 +58,7 @@ Output from ```xbps-query -m```.
 * neovim
 * network-manager-applet
 * nss-mdns
+* pantheon-agent-polkit
 * pavucontrol
 * pipewire
 * powertop
