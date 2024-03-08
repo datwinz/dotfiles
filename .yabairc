@@ -45,5 +45,6 @@ yabai -m rule --add app="^Systeeminstellingen$" manage=off layer=below
 yabai -m rule --add app="^VirtualBox VM$" manage=off layer=below
 yabai -m rule --add app="^VirtualBox$" manage=off layer=below
 yabai -m rule --add app="^Logseq$" manage=off layer=below
+yabai -m rule --add app="^Jagex Launcher$" manage=off layer=below
 
 echo "yabai configuration loaded.."
