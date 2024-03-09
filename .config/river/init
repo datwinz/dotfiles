@@ -163,7 +163,7 @@ riverctl rule-add -app-id "bar" csd
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 0 -outer-padding 0 -main-ratio 0.5 &
 
 # My rules
 riverctl map normal Super Escape spawn swaylock
@@ -184,4 +184,4 @@ riverctl spawn '/usr/libexec/policykit-1-pantheon/io.elementary.desktop.agent-po
 
 riverctl input pointer-1452-610-bcm5974 tap enabled
 riverctl input pointer-1452-610-bcm5974 natural-scroll disabled
-riverctl set-cursor-warp on-focus-change
+riverctl set-cursor-warp on-focus-chang
