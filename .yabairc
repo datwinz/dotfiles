@@ -19,8 +19,6 @@ yabai -m config                                 \
     window_placement             second_child   \
     window_zoom_persist          on             \
     window_shadow                on             \
-    window_animation_duration    0.0            \
-    window_animation_frame_rate  60             \
     window_opacity_duration      0.0            \
     active_window_opacity        1.0            \
     normal_window_opacity        0.90           \
@@ -41,10 +39,10 @@ yabai -m config                                 \
     mouse_drop_action            swap
 
 # rules
-yabai -m rule --add app="^Systeeminstellingen$" manage=off layer=below
-yabai -m rule --add app="^VirtualBox VM$" manage=off layer=below
-yabai -m rule --add app="^VirtualBox$" manage=off layer=below
-yabai -m rule --add app="^Logseq$" manage=off layer=below
-yabai -m rule --add app="^Jagex Launcher$" manage=off layer=below
+yabai -m rule --add app="^Systeeminstellingen$" manage=off sub-layer=below
+yabai -m rule --add app="^VirtualBox VM$" manage=off sub-layer=below
+yabai -m rule --add app="^VirtualBox$" manage=off sub-layer=below
+yabai -m rule --add app="^Logseq$" manage=off sub-layer=below
+yabai -m rule --add app="^Jagex Launcher$" manage=off sub-layer=below
 
 echo "yabai configuration loaded.."
