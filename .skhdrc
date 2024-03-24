@@ -21,10 +21,10 @@ shift + alt - l : yabai -m window --warp east
 shift + alt - 0 : yabai -m space --balance
 
   # float window
-alt - t : yabai -m window --toggle float ; yabai -m window --layer below
+alt - t : yabai -m window --toggle float ; yabai -m window --sub-layer below
 
   # make floating window float and fill screen
-shift + alt - up : yabai -m window --toggle float ; yabai -m window --layer below ; yabai -m window --grid 1:1:0:0:1:1
+shift + alt - up : yabai -m window --toggle float ; yabai -m window --sub-layer below ; yabai -m window --grid 1:1:0:0:1:1
 
   # send window to space and follow focus
 shift + ctrl - 1 : yabai -m window --space 1 ; yabai -m space --focus 1
