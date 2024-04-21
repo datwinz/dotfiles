@@ -56,7 +56,7 @@ export XDG_CONFIG_HOME=/home/void/.config
 export EDITOR=/usr/bin/nvim
 export MOZ_ENABLE_WAYLAND=1
 export LIBVA_DRIVER_NAME=i965
-export PATH=$PATH:/opt/texlive/2024/bin/x86_64-linux:~/.local/bin
+export PATH=$PATH:/opt/texlive/2024/bin/x86_64-linux:~/.local/bin:~/go/bin/
 export MANPATH=$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info
 
@@ -64,4 +64,5 @@ alias update-all-and-cleanup="sudo xbps-install -u xbps
                               sudo xbps-install -Su
                               sudo xbps-remove -Oo
                               sudo vkpurge rm all
+                              sudo tlmgr update --self
                               sudo tlmgr update --all"
