@@ -9,6 +9,9 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+-- Swift sourcekit-lsp
+require'lspconfig'.sourcekit.setup{}
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
   handlers = {
