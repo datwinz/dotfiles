@@ -23,13 +23,13 @@ require('pckr').add{
         requires = { 'nvim-lua/plenary.nvim' } };
     { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
     { 'nvim-telescope/telescope.nvim',
-        tag = '0.1.5',
+        tag = '0.1.8',
         requires = { 'nvim-lua/plenary.nvim'} };
     -- Mason for LSP language servers
     { 'williamboman/mason.nvim' };
     { 'williamboman/mason-lspconfig.nvim' };
     -- LSP Support
-    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' };
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' };
     { 'neovim/nvim-lspconfig' };
     { 'hrsh7th/cmp-nvim-lsp' };
     { 'hrsh7th/cmp-buffer' };
