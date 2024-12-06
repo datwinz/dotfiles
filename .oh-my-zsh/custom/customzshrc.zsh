@@ -56,9 +56,6 @@ alias yabairestart="yabai --restart-service"
 
 alias bclm77="sudo bclm write 77"
 
-## Alias because of bug, see https://github.com/Homebrew/homebrew-core/issues/158497
-alias virt-manager="screen -dm virt-manager --no-fork"
-
 # Package manager aliases
 alias brews="brew search"
 alias brewi="brew install"
