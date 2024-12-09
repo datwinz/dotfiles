@@ -52,7 +52,6 @@ fi
 
 # Linux-specific
 # Environment variables
-export XDG_CONFIG_HOME=/home/void/.config
 export EDITOR=/usr/bin/nvim
 export MOZ_ENABLE_WAYLAND=1
 export LIBVA_DRIVER_NAME=i965

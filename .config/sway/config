@@ -23,7 +23,7 @@ set $menu tofi-run | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/void/Pictures/Sway-Cheatsheet.png stretch
+output * bg /home/floor/Pictures/Sway-Cheatsheet.png stretch
 #
 # Example configuration:
 #
@@ -215,7 +215,7 @@ bindsym $mod+r mode "resize"
 #
 #    # When the status_command prints a new line to stdout, swaybar updates.
 #    # The default just shows the current date and time.
-#    status_command while /home/void/.config/sway/status.sh; do sleep 1; done
+#    status_command while /home/floor/.config/sway/status.sh; do sleep 1; done
 #
 #    colors {
 #        statusline #323232
@@ -241,10 +241,10 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # Autostart
 exec pipewire
-exec waybar -c /home/void/.config/waybar/config_sway
+exec waybar -c /home/floor/.config/waybar/config_sway
 exec mpd
 exec udiskie
-exec /home/void/.local/bin/stack.AppImage
+exec /home/floor/.local/bin/stack.AppImage
 exec wlsunset -l 52.5 -L 6.0
 exec mako
 exec /usr/libexec/policykit-1-pantheon/io.elementary.desktop.agent-polkit
