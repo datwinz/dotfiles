@@ -54,8 +54,6 @@ fi
 # Aliases
 alias yabairestart="yabai --restart-service"
 
-alias bclm77="sudo bclm write 77"
-
 # Package manager aliases
 alias brews="brew search"
 alias brewi="brew install"
