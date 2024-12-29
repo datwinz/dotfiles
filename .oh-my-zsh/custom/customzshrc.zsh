@@ -9,7 +9,7 @@ alias vim="nvim"
 ## Dotfile Bare Git Repo
 alias config="/usr/bin/git --git-dir=/Users/floor/.cfg/ --work-tree=/Users/floor"
 alias configa="config add"
-alias configcm="config commit -m"
+alias configcmsg="config commit -m"
 alias configst="config status"
 alias configlog="config log --oneline --decorate --graph"
 alias configd="config diff"
@@ -64,3 +64,11 @@ alias brewls="brew ls"
 
 # Environment variables
 export PATH="/usr/local/sbin:$PATH:/Users/floor/.local/bin"
+
+empty_trash () {
+  osascript 2> /dev/null <<EOF
+  tell application "Finder"
+    empty trash
+  end tell
+EOF
+}
