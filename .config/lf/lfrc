@@ -38,6 +38,7 @@ map O $mimeopen --ask $f
 cmd open &{{
     case $(file --mime-type -Lb $f) in
         text/*) lf -remote "send $id \$nvim \$fx";;
+        message/rfc822) lf -remote "send $id \$nvim \$fx";;
         *) for f in $fx; do open $f > /dev/null 2> /dev/null & done;;
     esac
 }}
