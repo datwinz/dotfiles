@@ -44,5 +44,7 @@ yabai -m rule --add app="^VirtualBox VM$" manage=off sub-layer=below
 yabai -m rule --add app="^VirtualBox$" manage=off sub-layer=below
 yabai -m rule --add app="^Logseq$" manage=off sub-layer=below
 yabai -m rule --add app="^Jagex Launcher$" manage=off sub-layer=below
+yabai -m rule --add app="^Bitwarden$" manage=off sub-layer=below
+yabai -m rule --add app="^Firefox$" title="^.*Extensi.*Bitwarden.*$" manage=off sub-layer=below
 
 echo "yabai configuration loaded.."
