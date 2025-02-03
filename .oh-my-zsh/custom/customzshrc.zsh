@@ -9,7 +9,7 @@ alias vim="nvim"
 ## Dotfile Bare Git Repo
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias configa="config add"
-alias configcm="config commit -m"
+alias configcmsg="config commit -m"
 alias configst="config status"
 alias configlog="config log --oneline --decorate --graph"
 alias configd="config diff"
