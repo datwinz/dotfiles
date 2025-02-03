@@ -1,4 +1,4 @@
-- name: Install
+- name: Install & setup
   hosts: localhost
 
   tasks:
@@ -13,18 +13,49 @@
           - virt-manager
           - emacs
           - lf
-          - flatpak
+          - tar
+          - kitty
         state: latest
-    - name: Install flatpaks
-      community.general.flatpak:
-        name: io.neovim.nvim
-        state: present
+
+    - name: Make sure local bin exists
+      ansible.builtin.file:
+        path: $HOME/.local/bin
+        state: directory
+
+    - name: Check if neovim is installed
+      ansible.builtin.stat:
+        path: /opt/nvim-linux-x86_64
+      register: nvim_result
+    - name: Install neovim
+      become: true
+      ansible.builtin.shell: |
+        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+        tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+        rm nvim-linux-x86_64.tar.gz
+      when: not nvim_result.stat.exists
+    - name: Link neovim binary
+      ansible.builtin.file:
+        src: /opt/nvim-linux-x86_64/bin/nvim
+        dest: $HOME/.local/bin/nvim
+        state: link
+
+    - name: Check if pistol is installed
+      ansible.builtin.stat:
+        path: $HOME/.local/bin/pistol
+      register: pistol_result
+    - name: Install pistol
+      ansible.builtin.shell: |
+        curl -LO https://github.com/doronbehar/pistol/releases/latest/download/pistol-static-linux-x86_64
+        mv pistol-static-linux-x86_64 $HOME/.local/bin/pistol
+        chmod +x $HOME/.local/bin/pistol
+      when: not pistol_result.stat.exists
+
     - name: Dotfiles
       ansible.builtin.git:
         repo: 'https://github.com/datwinz/dotfiles'
         dest: ~/.cfg
         bare: true
-    - name: Check if dotfiles have been checked out
+    - name: Check if dotfiles have been checked out (~/.spacemacs)
       ansible.builtin.stat:
         path: $HOME/.spacemacs
       register: stat_result
@@ -34,7 +65,8 @@
         [[ -f $HOME/.zshrc ]] && mv $HOME/.zshrc $HOME/.zshrc.bak
         git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout linux_void
       when: not stat_result.stat.exists
-    - name: Check if oh-my-zsh has been installed
+
+    - name: Check if oh-my-zsh has been installed (~/.oh-my-zsh/README.md)
       ansible.builtin.stat:
         path: $HOME/.oh-my-zsh/README.md
       register: omz_result
@@ -50,11 +82,13 @@
         git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no
         mkdir $HOME/.ssh
       when: not omz_result.stat.exists
+
     - name: Change shell to zsh
-      become: true
-      ansible.builtin.shell: |
-        chsh -s /bin/zsh floor
-    - name: Check if spacemacs has been installed
+      ansible.builtin.user:
+        name: floor
+        shell: /bin/zsh
+
+    - name: Check if spacemacs has been installed ($HOME/.emacs.d/spacemacs.mk)
       ansible.builtin.stat:
         path: $HOME/.emacs.d/spacemacs.mk
       register: space_result
