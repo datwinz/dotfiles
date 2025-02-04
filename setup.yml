@@ -84,6 +84,7 @@
       when: not omz_result.stat.exists
 
     - name: Change shell to zsh
+      become: true
       ansible.builtin.user:
         name: floor
         shell: /bin/zsh
