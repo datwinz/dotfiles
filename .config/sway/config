@@ -227,12 +227,12 @@ bindsym $mod+r mode "resize"
 include /etc/sway/config.d/*
 
 # Keyboard brightness control
-bindsym XF86KbdBrightnessUp exec brightnessctl -d ':white:kbd_backlight' set 10%+
-bindsym XF86KbdBrightnessDown exec sudo brightnessctl -d ':white:kbd_backlight' set -10%
+bindsym XF86KbdBrightnessUp exec brightnessctl -d ':white:kbd_backlight' set +5%
+bindsym XF86KbdBrightnessDown exec brightnessctl -d ':white:kbd_backlight' set 5%-
 
 # Screen brightness control
-bindsym XF86MonBrightnessUp exec brightnessctl -d 'gmux_backlight' set 10%+
-bindsym XF86MonBrightnessDown exec brightnessctl -d 'gmux_backlight' set -10%
+bindsym XF86MonBrightnessUp exec brightnessctl -d 'gmux_backlight' set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl -d 'gmux_backlight' set 5%-
 
 # Volume control
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
