@@ -6,21 +6,43 @@
       become: true
       ansible.builtin.package:
         name:
+# Basic
           - vim
           - git
           - zsh
+          - tar
+# Virtualisation
           - docker.io
           - virt-manager
+# Programs
           - emacs
           - lf
-          - tar
           - kitty
+          - mpd
+          - ncmpcpp
+          - ripgrep
+# Sway
+          - tofi
+          - sway
+          - swaylock
+          - waybar
+          - mako-notifier
+          - wlogout
+          - wlsunset
+          - light
+          - brightnessctl
         state: latest
 
     - name: Make sure local bin exists
       ansible.builtin.file:
         path: $HOME/.local/bin
         state: directory
+    - name: Add user to groups
+      become: true
+      ansible.builtin.user:
+        name: floor
+        append: true
+        groups: docker,video,input
 
     - name: Check if neovim is installed
       ansible.builtin.stat:
