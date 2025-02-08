@@ -43,6 +43,30 @@
         name: floor
         append: true
         groups: docker,video,input
+    - name: Disable system mpd service
+      become: true
+      ansible.builtin.systemd_service:
+        state: stopped
+        enabled: false
+        name: mpd.service
+    - name: Disable system mpd socket
+      become: true
+      ansible.builtin.systemd_service:
+        state: stopped
+        enabled: false
+        name: mpd.socket
+    - name: Enable user mpd socket
+      ansible.builtin.systemd_service:
+        state: started
+        enabled: true
+        scope: user
+        name: mpd.socket
+    - name: Enable user mpd service
+      ansible.builtin.systemd_service:
+        state: started
+        enabled: true
+        scope: user
+        name: mpd.socket
 
     - name: Check if neovim is installed
       ansible.builtin.stat:
