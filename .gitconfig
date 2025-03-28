@@ -3,5 +3,5 @@
 	email = fmdrewes@gmail.com
 [init]
 	defaultBranch = main
-[core]
-	hooksPath = /home/void/.gitlab-gitleaks/hooks
+[push]
+	autoSetupRemote = true
