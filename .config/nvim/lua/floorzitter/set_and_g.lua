@@ -24,6 +24,9 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- Whitespace
+vim.opt.listchars = 'eol:^,tab:>-,space:·,trail:⏺'
+
 -- Colorscheme
 vim.cmd.colorscheme('customonehalflight')
 

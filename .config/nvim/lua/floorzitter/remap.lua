@@ -7,6 +7,10 @@ vim.keymap.set('','<C-k>','<C-W>k')
 vim.keymap.set('','<C-h>','<C-W>h')
 vim.keymap.set('','<C-l>','<C-W>l')
 
+-- Show whitespace
+vim.keymap.set('','<leader>w','<cmd>set list<CR>')
+vim.keymap.set('','<leader>q','<cmd>set nolist<CR>')
+
 -- Open netrw
 vim.keymap.set('','<leader>gf',vim.cmd.Ex)
 
