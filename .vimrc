@@ -1,3 +1,9 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
 " Using https://github.com/junegunn/vim-plug
 Plug 'tpope/vim-sensible'
@@ -40,8 +46,15 @@ cmap W w
 
 " Windows
 map <leader>c :close<CR>
+
+" Lines
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Whitespace
+set listchars=eol:^,tab:>-,space:·,trail:_
+map <leader>w :set list<CR>
+map <leader>q :set nolist<CR>
 
 " Tab options
 " Auto tab smartst, smarter, smart
