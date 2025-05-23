@@ -6,6 +6,8 @@ alias la="ls -A"
 
 alias vim="nvim"
 
+alias trash-l="ls -Altr ~/.Trash/"
+
 ## Dotfile Bare Git Repo
 alias config="/usr/bin/git --git-dir=/Users/floor/.cfg/ --work-tree=/Users/floor"
 alias configa="config add"
