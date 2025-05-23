@@ -49,7 +49,6 @@ require('mason-lspconfig').setup({
 -- Autocompletion config
 ---
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
@@ -63,10 +62,6 @@ cmp.setup({
     ['<Tab>'] = cmp.mapping.confirm({select = true}),
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-
-    -- Navigate between snippet placeholder
-    ['<C-f>'] = cmp_action.vim_snippet_jump_forward(),
-    ['<C-b>'] = cmp_action.vim_snippet_jump_backward(),
 
     -- Scroll up and down in the completion documentation
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
