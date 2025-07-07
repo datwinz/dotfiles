@@ -5,6 +5,7 @@ alias help="man"
 alias la="ls -A"
 
 alias vim="nvim"
+alias lazyvim='NVIM_APPNAME="nvim-kickstart" nvim'
 
 alias trash-l="ls -Altr ~/.Trash/"
 
