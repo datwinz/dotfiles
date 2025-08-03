@@ -118,7 +118,7 @@
       ansible.builtin.shell: |
         [[ -f $HOME/.bashrc ]] && mv $HOME/.bashrc $HOME/.bashrc.bak
         [[ -f $HOME/.zshrc ]] && mv $HOME/.zshrc $HOME/.zshrc.bak
-        git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout linux_void
+        git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout linux
       when: not stat_result.stat.exists
 
     - name: Check if oh-my-zsh has been installed (~/.oh-my-zsh/README.md)
