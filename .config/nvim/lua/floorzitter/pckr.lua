@@ -29,7 +29,6 @@ require('pckr').add{
     { 'williamboman/mason.nvim' };
     { 'williamboman/mason-lspconfig.nvim' };
     -- LSP Support
-    { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' };
     { 'neovim/nvim-lspconfig' };
     { 'hrsh7th/cmp-nvim-lsp' };
     { 'hrsh7th/cmp-buffer' };
