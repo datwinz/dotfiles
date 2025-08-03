@@ -6,22 +6,22 @@
       become: true
       ansible.builtin.package:
         name:
-# Basic
+        # Basic
           - vim
           - git
           - zsh
           - tar
-# Virtualisation
+        # Virtualisation
           - docker.io
           - virt-manager
-# Programs
+        # Programs
           - emacs
           - lf
           - kitty
           - mpd
           - ncmpcpp
           - ripgrep
-# Sway
+        # Sway
           - tofi
           - sway
           - swaylock
@@ -68,33 +68,42 @@
         scope: user
         name: mpd.socket
 
-    - name: Check if neovim is installed
+    - name: Check if nix is installed
       ansible.builtin.stat:
-        path: /opt/nvim-linux-x86_64
-      register: nvim_result
-    - name: Install neovim
+        path: /nix
+      register: nix_result
+    - name: Install nix
       become: true
       ansible.builtin.shell: |
-        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-        tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-        rm nvim-linux-x86_64.tar.gz
+        sh <(curl -L https://nixos.org/nix/install) --daemon --yes
+      when: not nix_result.stat.exists
+    # neovim
+    - name: Check if neovim is installed
+      ansible.builtin.stat:
+        path: $HOME/.nix-profile/bin/nvim
+      register: nvim_result
+    - name: Install neovim
+      ansible.builtin.shell: |
+        nix profile add nixpkgs#neovim
       when: not nvim_result.stat.exists
-    - name: Link neovim binary
-      ansible.builtin.file:
-        src: /opt/nvim-linux-x86_64/bin/nvim
-        dest: $HOME/.local/bin/nvim
-        state: link
-
+    # pistol
     - name: Check if pistol is installed
       ansible.builtin.stat:
-        path: $HOME/.local/bin/pistol
+        path: $HOME/.nix-profile/bin/pistol
       register: pistol_result
     - name: Install pistol
       ansible.builtin.shell: |
-        curl -LO https://github.com/doronbehar/pistol/releases/latest/download/pistol-static-linux-x86_64
-        mv pistol-static-linux-x86_64 $HOME/.local/bin/pistol
-        chmod +x $HOME/.local/bin/pistol
+        nix profile add nixpkgs#pistol
       when: not pistol_result.stat.exists
+    # texlive
+    - name: Check if texlive is installed
+      ansible.builtin.stat:
+        path: $HOME/.nix-profile/bin/latex
+      register: texlive_result
+    - name: Install texlive
+      ansible.builtin.shell: |
+        nix profile install nixpkgs#texliveMedium
+      when: not texlive_result.stat.exists
 
     - name: Dotfiles
       ansible.builtin.git:

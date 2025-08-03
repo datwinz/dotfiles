@@ -52,5 +52,5 @@ fi
 
 # Linux-specific
 # Environment variables
-export EDITOR=/opt/nvim-linux64/bin/nvim
-export PATH=$PATH:/opt/texlive/2024/bin/x86_64-linux:~/.local/bin:~/go/bin/:/opt/nvim-linux64/bin
+export EDITOR=~/.nix-profile/bin/nvim
+export PATH=$PATH:~/.local/bin:~/go/bin/
