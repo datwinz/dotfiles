@@ -54,3 +54,8 @@ fi
 # Environment variables
 export EDITOR=~/.nix-profile/bin/nvim
 export PATH=$PATH:~/.local/bin:~/go/bin/
+
+alias brightness-up="brightnessctl -d 'gmux_backlight' set +5%"
+alias brightness-down="brightnessctl -d 'gmux_backlight' set 5%-"
+alias audio-up="pactl set-sink-volume 0 +5%"
+alias audio-down="pactl set-sink-volume 0 -5%"
