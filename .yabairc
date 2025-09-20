@@ -40,6 +40,7 @@ yabai -m config                                 \
 
 # rules
 yabai -m rule --add app="^Systeeminstellingen$" manage=off sub-layer=below
+yabai -m rule --add app="^Plaknotities$" manage=off sub-layer=below
 yabai -m rule --add app="^VirtualBox VM$" manage=off sub-layer=below
 yabai -m rule --add app="^VirtualBox$" manage=off sub-layer=below
 yabai -m rule --add app="^Logseq$" manage=off sub-layer=below
