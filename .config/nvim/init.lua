@@ -73,9 +73,6 @@ vim.o.confirm = true
 -- Netrw
 vim.g.netrw_banner = 0
 
--- Colorscheme
--- vim.cmd.colorscheme('customonehalflight')
-
 -- [[ Basic Keymaps ]]
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
