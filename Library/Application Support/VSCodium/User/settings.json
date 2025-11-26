@@ -1,5 +1,7 @@
 {
     "workbench.colorTheme": "Quiet Light",
     "update.showReleaseNotes": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.startupEditor": "none",
+    "editor.wordWrap": "on"
 }
