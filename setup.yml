@@ -11,6 +11,10 @@
           - git
           - zsh
           - tar
+        # Neovim
+          - npm
+          - python3
+          - golang
         # Virtualisation
           - docker.io
           - virt-manager
