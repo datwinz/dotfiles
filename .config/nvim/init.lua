@@ -122,7 +122,7 @@ vim.keymap.set("n", "<leader>p", vim.cmd.cprev)
 
 vim.api.nvim_create_user_command('UpdateAll',
     function ()
-        vim.cmd("TSUpdateSync")
+        vim.cmd("TSUpdate")
         vim.cmd("Mason")
         vim.cmd("Lazy sync")
     end,
@@ -428,7 +428,6 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
