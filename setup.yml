@@ -15,6 +15,7 @@
           - npm
           - python3
           - golang
+          - tree-sitter-cli
         # Virtualisation
           - docker.io
           - virt-manager
