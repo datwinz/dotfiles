@@ -74,3 +74,19 @@ empty_trash () {
   end tell
 EOF
 }
+
+# Turn of zsh builtin wildcard matching so stdout and stderr redirects work
+setopt nonomatch
+chpwd() {
+  if ls *env*/pyvenv.cfg &>/dev/null
+  then
+    source *env*/bin/activate
+  fi
+}
+
+chpwd() {
+  if ls .*env*/pyvenv.cfg &>/dev/null
+  then
+    source .*env*/bin/activate
+  fi
+}
